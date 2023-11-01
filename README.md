@@ -15,6 +15,7 @@ The IP Location Finder is a Python script that allows you to retrieve location i
 2. Install the required libraries using pip:
    ```
    pip install requests
+   pip install tabulate
    ```
 
 ## Usage
@@ -38,6 +39,7 @@ Organization: AS15169 Google LLC
 
 ## Dependencies
 - [requests](https://pypi.org/project/requests/): A library for making HTTP requests.
+- [tabulate](https://pypi.org/project/tabulate/): A library for formatting data as tables.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
