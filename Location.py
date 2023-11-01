@@ -1,4 +1,5 @@
 import requests
+from tabulate import tabulate  # Import the tabulate library
 
 def get_ip_location(ip_address):
     try:
@@ -13,13 +14,20 @@ def get_ip_location(ip_address):
             city = data.get("city", "N/A")
             postal = data.get("postal", "N/A")
             org = data.get("org", "N/A")
-            
-            print(f"IP Address: {ip_address}")
-            print(f"Country: {country}")
-            print(f"Region: {region}")
-            print(f"City: {city}")
-            print(f"Postal Code: {postal}")
-            print(f"Organization: {org}")
+
+            # Create a list of lists for tabulate
+            table_data = [
+                ["IP Address", ip_address],
+                ["Country", country],
+                ["Region", region],
+                ["City", city],
+                ["Postal Code", postal],
+                ["Organization", org]
+            ]
+
+            # Use tabulate to format and print the data as a table
+            table = tabulate(table_data, tablefmt="grid")
+            print(table)
         else:
             print(f"Failed to retrieve information for IP address: {ip_address}")
     except Exception as e:
