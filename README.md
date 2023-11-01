@@ -20,7 +20,7 @@ The IP Location Finder is a Python script that allows you to retrieve location i
 ## Usage
 1. Run the script:
    ```
-   python ip_location_finder.py
+   python Location.py
    ```
 2. Enter the IP address when prompted.
 3. View the location information for the provided IP address.
